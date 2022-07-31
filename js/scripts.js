@@ -33,7 +33,7 @@ const loop = setInterval(() => {
         mario.style.marginLeft = '50px';
 
         clouds.style.animation = 'none';
-        clouds.style.left = `${cloudsPosition}px`;
+        clouds.style.left = '1550px';
 
         gameOver.innerHTML = "GAME OVER";
         
