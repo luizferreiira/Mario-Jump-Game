@@ -3,6 +3,12 @@ const pipe = document.querySelector('.pipe');
 const clouds = document.querySelector('.clouds');
 const gameOver = document.querySelector('.game-over');
 const gameBoard = document.querySelector('.game-board');
+const score = document.querySelector('.score');
+
+let pontuacao = 0;
+
+
+
 
 const jump = () =>{
     mario.classList.add('jump');
@@ -19,6 +25,7 @@ const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const cloudsPosition = clouds.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
+
 
     if(pipePosition <= 120 && pipePosition > 0 && marioPosition < 80){
 
@@ -40,11 +47,15 @@ const loop = setInterval(() => {
         gameBoard.classList.remove('game-board');
         gameBoard.classList.add('game-board-dark');
 
-
         clearInterval(loop);
 
-    }
+    }else if(pipePosition < 0 && marioPosition > 80 ){
 
+        pontuacao += 10;
+        score.innerHTML = pontuacao;
+
+    }
+    
 }, 10)
 
 document.addEventListener('keydown', jump);

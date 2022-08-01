@@ -56,6 +56,23 @@
     color: #e7c52e;
 }
 
+.score{
+    margin-left: 20px;
+    font-size: 50px;
+    color: #ca3724;
+    
+}
+
+.pontos{
+    margin-left: 20px;
+    font-size: 50px;
+    color: #ca3724;
+}
+
+.flex-container{
+    display: flex;
+}
+
 @keyframes pipe-animation {
     from{
         right: -80px;
